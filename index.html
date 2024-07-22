@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="wrapper">
+        <h1>Typing Speed Game</h1>
+        <input type="text" class="input-field" />
+        <div class="content-box">
+          <div class="typingText">
+            <p></p>
+          </div>
+        </div>
+        <div class="content">
+          <ul class="result-details">
+            <li class="time">
+              <p>Time Left:</p>
+              <span id="time"><b>60</b>s</span>
+            </li>
+            <li class="mistake">
+              <p>Mistake:</p>
+              <span id="mistake">0</span>
+            </li>
+            <li class="wpm">
+              <p>WPM:</p>
+              <span id="wpm">0</span>
+            </li>
+            <li class="cpm">
+              <p>CPM:</p>
+              <span id="cpm">0</span>
+            </li>
+          </ul>
+          <div class="center-btn">
+              <button id="restart" class="btn">Restart</button>
+            <button id="start" class="btn">Start Game</button>
+            <button id="settings" class="btn">Settings</button>
+          </div>
+        </div>
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="setting">Settings</h2>
+            <label class="lableInput" for="timeInput">Set Time (seconds):</label> <br>
+            <input class="inputTime" type="number" id="timeInput" value="60" min="10" />
+            <button id="saveSettings" class="btn">Save Time</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
